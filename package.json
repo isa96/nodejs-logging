@@ -1,0 +1,42 @@
+{
+  "name": "nodejs-logging",
+  "version": "1.0.0",
+  "description": "Belajar NodeJS Logging",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "maxConcurrency": 2,
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!vendor/**/*.{js,jsx}"
+    ]
+  },
+  "author": "Izzan Silmi Aziz",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.0",
+    "jest": "^28.1.0"
+  },
+  "dependencies": {
+    "winston": "^3.8.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
+}
